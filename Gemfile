@@ -15,6 +15,7 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder'
+gem 'webpacker'
 
 group :development, :test do
   gem 'sqlite3'

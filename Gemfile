@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails'
+gem 'bootstrap-sass'
 gem 'bcrypt'
 gem 'faker'
 gem 'carrierwave'

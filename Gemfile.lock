@@ -491,6 +491,7 @@ DEPENDENCIES
   coffee-rails
   faker
   fog
+  fog-core
   guard
   guard-minitest
   jbuilder

@@ -3,13 +3,13 @@ class SessionsController < ApplicationController
   end
 
   def create
-    _user = User.find_by(email: params[:session][:email].downcase)
-    if _user && _user.authenticate(params[:session][:password])
+    user = User.find_by(email: params[:session][:email].downcase)
+    if user && user.authenticate(params[:session][:password])
+      forwarding_url = session[:forwarding_url]
       reset_session
-      log_in _user
-      params[:session][:remember_me] == '1' ? remember(_user) : forget(_user)
-      session[:session_token] = _user.session_token
-      redirect_to _user
+      log_in user
+      params[:session][:remember_me] == '1' ? remember(user) : forget(user)
+      redirect_to forwarding_url || user
     else
       flash.now[:danger] = 'Invalid email/password combination'
       render 'new'

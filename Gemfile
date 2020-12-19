@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'rails'
+gem 'image_processing'
+gem 'mini_magick'
+gem 'active_storage_validations'
 gem 'bootstrap-sass'
 gem 'bcrypt'
 gem 'faker'
